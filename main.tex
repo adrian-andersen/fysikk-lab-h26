@@ -14,6 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{setspace}
+\usepackage{etoolbox}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
@@ -22,6 +23,14 @@
 \usepackage{siunitx}
 \usepackage{tikz}
 \usepackage{hyperref}
+
+% Global linjeavstand på 1,5 for hele dokumentet
+\onehalfspacing
+
+% Enkel linjeavstand for tabeller og flytelementer for et ryddig, kompakt uttrykk
+\AtBeginEnvironment{table}{\singlespacing}
+\AtBeginEnvironment{tabular}{\singlespacing}
+\AtBeginEnvironment{lstlisting}{\singlespacing}
 
 % Oppsett for SI-enheter med norsk desimalkomma
 \sisetup{
@@ -51,7 +60,7 @@
 % Listings-innstillinger for Python-kode
 \lstset{
     backgroundcolor=\color{codebackground},
-    basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily\footnotesize\singlespacing,
     breakatwhitespace=false,
     breaklines=true,
     captionpos=b,
@@ -109,28 +118,24 @@
 % ------------------------------------------------------------------------------
 \begin{titlepage}
     \centering
-    \vspace*{0.5cm}
+    \vspace*{0.2cm}
 
-    % Offisiell NTNU-logo med robust vektorisert TikZ-fallback
-    \IfFileExists{ntnu_logo.png}{%
-        \includegraphics[width=0.36\textwidth]{ntnu_logo.png}%
+    % Offisiell NTNU-logo med slagord (feiltolerant fallback)
+    \IfFileExists{ntnu_med_slagord_hoeyde_bokmaal.png}{%
+        \includegraphics[width=0.55\textwidth]{ntnu_med_slagord_hoeyde_bokmaal.png}%
     }{%
-        \IfFileExists{ntnu_logo.pdf}{%
-            \includegraphics[width=0.36\textwidth]{ntnu_logo.pdf}%
-        }{%
-            \begin{tikzpicture}
-                \node[text=ntnublue, font=\fontsize{34}{38}\selectfont\bfseries\sffamily] (logo) at (0,0) {NTNU};
-                \draw[gray!50, line width=1.2pt] (2.1,-0.65) -- (2.1,0.65);
-                \node[anchor=west, align=left, font=\sffamily\footnotesize, text=gray!80] at (2.3,0) {%
-                    \textbf{\large Norges teknisk-naturvitenskapelige}\\[0.05cm]
-                    \textbf{\large universitet}\\[0.15cm]
-                    Institutt for fysikk
-                };
-            \end{tikzpicture}%
-        }%
+        \begin{tikzpicture}
+            \node[text=ntnublue, font=\fontsize{34}{38}\selectfont\bfseries\sffamily] (logo) at (0,0) {NTNU};
+            \draw[gray!50, line width=1.2pt] (2.1,-0.65) -- (2.1,0.65);
+            \node[anchor=west, align=left, font=\sffamily\footnotesize, text=gray!80] at (2.3,0) {%
+                \textbf{\large Norges teknisk-naturvitenskapelige}\\[0.05cm]
+                \textbf{\large universitet}\\[0.15cm]
+                \textit{\small Kunnskap for en bedre verden}
+            };
+        \end{tikzpicture}%
     }
 
-    \vspace{2.2cm}
+    \vspace{2.0cm}
 
     {\huge \bfseries \textsf{Eksperimentell og numerisk analyse av rullende kule på krum bane}\par}
     \vspace{0.6cm}
@@ -153,7 +158,7 @@
     {\small \textsf{Norges teknisk-naturvitenskapelige universitet (NTNU), Trondheim}\par}
     \vspace{0.6cm}
     {\small \textsf{Høst 2026}\par}
-    \vspace*{0.5cm}
+    \vspace*{0.3cm}
 \end{titlepage}
 
 \thispagestyle{empty}
@@ -163,24 +168,22 @@
 % 2. SAMMENDRAG (DEDIKERT SIDE 2)
 % ------------------------------------------------------------------------------
 \thispagestyle{fancy}
-\vspace*{1.5cm}
+\vspace*{1.2cm}
 
 \begin{center}
     {\Large \bfseries \textsf{Sammendrag}}\par
-    \vspace{0.5cm}
+    \vspace{0.4cm}
     {\color{ntnublue}\rule{0.25\textwidth}{0.8pt}}\par
 \end{center}
 
-\vspace{1.2cm}
+\vspace{1.0cm}
 
-\begin{setspace}{1.25}
 \noindent
 I dette laboratorieforsøket er bevegelsen til en kompakt kule som ruller langs en todimensjonal krum bane undersøkt gjennom en kombinasjon av en idealisert numerisk modell og eksperimentell videoanalyse. Baneprofilen ble formet ved hjelp av åtte justerbare festeskruer og modellert matematisk ved en naturlig kubisk splineinterpolasjon. Den teoretiske modellen forutsetter ren rulling uten glidning ($v = r\omega$) og streng bevaring av mekanisk energi, hvor gravitasjonspotensiell energi konverteres tapsfritt til translatorisk og rotatorisk kinetisk energi.
 
 Modellens numeriske tidsintegrasjon resulterte i en teoretisk rulletid på $t_{\text{teor}} = \SI{1,828}{\second}$ og en teoretisk sluttfart på $v_{\text{teor}} = \SI{1,242}{\meter\per\second}$ ved banens ende ($x = \SI{1,40}{\meter}$). Eksperimentelle data fra åtte uavhengige rulleforsøk, filmet med mobilkamera ved en bildefrekvens på \SI{60}{fps} og analysert i sporingsprogrammet Tracker, ga en gjennomsnittlig målt rulletid på $\overline{t} = \SI{2,277 \pm 0,022}{\second}$ (utvalgsstandardavvik $s_t = \SI{0,061}{\second}$) og en gjennomsnittlig målt sluttfart på $\overline{v}_{\text{slutt}} = \SI{0,994 \pm 0,010}{\meter\per\second}$ (utvalgsstandardavvik $s_v = \SI{0,029}{\meter\per\second}$). Målt rulletid er dermed \SI{24,6}{\percent} lengre og målt sluttfart \SI{20,0}{\percent} lavere enn den ideelle modellens forutsigelser.
 
 Det totale frigjorte potensielle energibidraget mellom start- og slutthøyden var $\Delta E_{\text{pot}} = mg(y_0 - y_f) = \SI{33,45}{\milli\joule}$. Ved å inkludere både translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$) ble det gjennomsnittlige mekaniske energitapet bestemt til $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$ ($s_{\Delta E} = \SI{1,26}{\milli\joule}$), noe som representerer et relativt tap av mekanisk energi på \SI{35,8}{\percent}. Den dynamiske kraftanalysen viste et maksimalt krav til statisk friksjonskoeffisient på $\max |f/N| = 0{,}144$, noe som tilsier at ren rulling i hovedsak var opprettholdt. Det observerte energitapet og den tilhørende tidsforsinkelsen skyldes primært rullemotstand (elastisk deformasjonshysterese forsterket av to-punktskontakt mot banens profilskinner) samt i mindre grad mikroskopisk sluring i soner med stor krumning og luftmotstand. Forsøket viser at den ideelle numeriske modellen gir en god kvalitativ beskrivelse av banedynamikken, men fungerer kvantitativt som en teoretisk øvre grense for bevegelsen.
-\end{setspace}
 
 \vfill
 \clearpage
