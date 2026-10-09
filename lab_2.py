@@ -66,8 +66,11 @@ t = np.cumsum(dt)
 # Normalkraft N(x) = m * (g * cos(beta) + v^2 * kappa)
 N_kraft = m * (g * np.cos(beta) + (v**2) * kappa)
 
-# Statisk friksjonskraft f(x) = -(c / (1+c)) * m * g * sin(beta)
-f_friksjon = -(c / (1.0 + c)) * m * g * np.sin(beta)
+# Statisk friksjonskraft:
+# Langs tangensialvektor i positiv x-retning:
+# m*a_t = -m*g*sin(beta) + f, og tau = -f*r = I*alpha => f = -c*m*a_t
+# => a_t = -g*sin(beta)/(1+c) => f = (c / (1+c)) * m * g * sin(beta)
+f_friksjon = (c / (1.0 + c)) * m * g * np.sin(beta)
 
 # Friksjonsforhold |f/N|
 f_over_N = np.abs(f_friksjon / N_kraft)

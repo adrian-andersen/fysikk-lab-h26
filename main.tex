@@ -24,7 +24,7 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 
-% Global linjeavstand på 1,5 for hele dokumentet
+% Global linjeavstand på 1,5 for hele rapporten
 \onehalfspacing
 
 % Enkel linjeavstand for tabeller og flytelementer for et ryddig, kompakt uttrykk
@@ -82,7 +82,7 @@
 % Sideoppsett med fancyhdr
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small \textsf{TFY4106/TFY4125: Rullende kule på krum bane}}
+\fancyhead[L]{\small \textsf{TFY4106 / TFY4125 Fysikk: Rullende kule på krum bane}}
 \fancyhead[R]{\small \textsf{Gruppe 3}}
 \fancyfoot[C]{\small \textsf{Side \thepage\ av \pageref{LastPage}}}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -181,9 +181,9 @@
 \noindent
 I dette laboratorieforsøket er bevegelsen til en kompakt kule som ruller langs en todimensjonal krum bane undersøkt gjennom en kombinasjon av en idealisert numerisk modell og eksperimentell videoanalyse. Baneprofilen ble formet ved hjelp av åtte justerbare festeskruer og modellert matematisk ved en naturlig kubisk splineinterpolasjon. Den teoretiske modellen forutsetter ren rulling uten glidning ($v = r\omega$) og streng bevaring av mekanisk energi, hvor gravitasjonspotensiell energi konverteres tapsfritt til translatorisk og rotatorisk kinetisk energi.
 
-Modellens numeriske tidsintegrasjon resulterte i en teoretisk rulletid på $t_{\text{teor}} = \SI{1,828}{\second}$ og en teoretisk sluttfart på $v_{\text{teor}} = \SI{1,242}{\meter\per\second}$ ved banens ende ($x = \SI{1,40}{\meter}$). Eksperimentelle data fra åtte uavhengige rulleforsøk, filmet med mobilkamera ved en bildefrekvens på \SI{60}{fps} og analysert i sporingsprogrammet Tracker, ga en gjennomsnittlig målt rulletid på $\overline{t} = \SI{2,277 \pm 0,022}{\second}$ (utvalgsstandardavvik $s_t = \SI{0,061}{\second}$) og en gjennomsnittlig målt sluttfart på $\overline{v}_{\text{slutt}} = \SI{0,994 \pm 0,010}{\meter\per\second}$ (utvalgsstandardavvik $s_v = \SI{0,029}{\meter\per\second}$). Målt rulletid er dermed \SI{24,6}{\percent} lengre og målt sluttfart \SI{20,0}{\percent} lavere enn den ideelle modellens forutsigelser.
+Modellens numeriske tidsintegrasjon resulterte i en teoretisk rulletid på $t_{\text{teor}} = \SI{1,828}{\second}$ og en teoretisk sluttfart på $v_{\text{teor}} = \SI{1,242}{\meter\per\second}$ ved banens ende ($x = \SI{1,40}{\meter}$). Eksperimentelle data fra åtte uavhengige rulleforsøk, filmet med mobilkamera ved en bildefrekvens på \SI{60}{fps} og analysert i sporingsprogrammet Tracker, ga en gjennomsnittlig målt rulletid på $\overline{t} = \SI{2,277 \pm 0,022}{\second}$ (utvalgsstandardavvik $s_t = \SI{0,061}{\second}$) og en gjennomsnittlig målt sluttfart på $\overline{v}_{\text{slutt}} = \SI{0,994 \pm 0,010}{\meter\per\second}$ (utvalgsstandardavvik $s_v = \SI{0,029}{\meter\per\second}$). Målt rulletid er dermed \SI{24,6}{\percent} lengre og målt sluttfart \SI{20,0}{\percent} lavere enn den ideelle modellens forutsigelser. En sensitivitetskontroll der en utilsiktet duplisert måling (forsøk~8) ekskluderes gir $\overline{t}_{N=7} = \SI{2,285}{\second}$ og $\overline{v}_{N=7} = \SI{0,992}{\meter\per\second}$, hvilket bekrefter at resultatene er robuste.
 
-Det totale frigjorte potensielle energibidraget mellom start- og slutthøyden var $\Delta E_{\text{pot}} = mg(y_0 - y_f) = \SI{33,45}{\milli\joule}$. Ved å inkludere både translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$) ble det gjennomsnittlige mekaniske energitapet bestemt til $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$ ($s_{\Delta E} = \SI{1,26}{\milli\joule}$), noe som representerer et relativt tap av mekanisk energi på \SI{35,8}{\percent}. Den dynamiske kraftanalysen viste et maksimalt krav til statisk friksjonskoeffisient på $\max |f/N| = 0{,}144$, noe som tilsier at ren rulling i hovedsak var opprettholdt. Det observerte energitapet og den tilhørende tidsforsinkelsen skyldes primært rullemotstand (elastisk deformasjonshysterese forsterket av to-punktskontakt mot banens profilskinner) samt i mindre grad mikroskopisk sluring i soner med stor krumning og luftmotstand. Forsøket viser at den ideelle numeriske modellen gir en god kvalitativ beskrivelse av banedynamikken, men fungerer kvantitativt som en teoretisk øvre grense for bevegelsen.
+Det totale frigjorte potensielle energibidraget mellom start- og slutthøyden var $\Delta E_{\text{pot}} = mg(y_0 - y_f) = \SI{33,45}{\milli\joule}$. Ved å inkludere både translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$) ble det gjennomsnittlige mekaniske energitapet bestemt til $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$ ($s_{\Delta E} = \SI{1,26}{\milli\joule}$), noe som representerer et relativt tap av mekanisk energi på \SI{35,8}{\percent}. Den dynamiske kraftanalysen viste et maksimalt friksjonsforhold på $\max |f/N| = 0{,}144$, noe som indikerer at ren rulling var teoretisk oppnåelig under forutsetning av at underlagets statiske friksjonskoeffisient tilfredsstiller $\mu_s \ge 0{,}144$. Det observerte energitapet og den tilhørende tidsforsinkelsen skyldes primært rullemotstand (elastisk deformasjonshysterese forsterket av to-punktskontakt mot banens profilskinner samt dynamisk nedbøyning av banen i dalbunnen), samt i mindre grad mikroskopisk sluring og luftmotstand. Forsøket viser at den ideelle numeriske modellen gir en god kvalitativ beskrivelse av banedynamikken, men fungerer kvantitativt som en teoretisk øvre grense for bevegelsen.
 
 \vfill
 \clearpage
@@ -203,7 +203,7 @@ Det totale frigjorte potensielle energibidraget mellom start- og slutthøyden va
 \section{Innledning}
 Studiet av stive legemers bevegelse på krumme flater representerer et klassisk og fundamentalt problem innen analytisk mekanikk. Når et stivt legeme, eksempelvis en kompakt kule, ruller under påvirkning av tyngdekraften, kobles translatorisk bevegelsesenergi, rotatorisk kinetisk energi og gravitasjonspotensiell energi sammen i et dynamisk vekselvirkende system. I elementære modeller formuleres denne bevegelsen ofte under forutsetning om et konservativt system der mekanisk energi er strengt bevart, og der kontakten mellom kula og underlaget oppfyller vilkåret om ren rulling uten glidning ($v = r\omega$).
 
-I reelle fysiske laboratorieoppsett vil imidlertid legemet kontinuerlig erfare motstandskrefter. Dette inkluderer rullemotstand grunnet deformasjon av kontaktflaten, mikroskopisk sluring ved store vinkelakselerasjoner, samt aerodynamisk drag. Formålet med dette laboratorieforsøket i emnene TFY4106/TFY4125 Fysikk ved NTNU er todelt:
+I reelle fysiske laboratorieoppsett vil imidlertid legemet kontinuerlig erfare motstandskrefter. Dette inkluderer rullemotstand grunnet deformasjon av kontaktflaten, mikroskopisk sluring ved store vinkelakselerasjoner, samt aerodynamisk drag. Formålet med dette laboratorieforsøket i emnene TFY4106 / TFY4125 Fysikk ved NTNU er todelt:
 \begin{enumerate}
     \item Å utvikle en ideell numerisk modell i Python som beregner kulas kontinuerlige baneform ved en naturlig kubisk splineinterpolasjon, og deretter utlede kulas hastighetsprofil $v(x)$, tidsforbruk $t(x)$, normalkraft $N(x)$, friksjonskraft $f(x)$ og friksjonsforhold $|f/N|(x)$ basert på ren rulling og energibevaring.
     \item Å gjennomføre systematiske eksperimentelle målinger ved høyoppløselig videoopptak (\SI{60}{fps}) og digital massesentersporing i programvaren Tracker, for deretter å sammenligne modellens teoretiske prediksjoner med reelle observasjoner over åtte uavhengige forsøk.
@@ -326,44 +326,46 @@ Krumningens fortegn $\kappa(x)$ er avgjørende:
 \end{itemize}
 
 \paragraph{Friksjonskraft og rotasjonsakselerasjon:}
-Langs banens tangent virker tyngdekraftens tangensialkomponent $mg\sin\beta(x)$ og den statiske friksjonskraften $f(x)$. Newtons 2.~lov for translasjon langs banen lyder:
+Vi definerer en tangentvektor $\hat{t} = (\cos\beta, \sin\beta)$ i retning for økende $x$. Tyngdekraftens komponent langs denne tangentretningen er $-mg\sin\beta(x)$. La $f(x)$ betegne den statiske friksjonskraften som underlaget utøver på kulas periferi, definert med positiv retning langs $\hat{t}$. Newtons 2.~lov for translasjon langs banen lyder da:
 \begin{equation}
-    mg\sin\beta(x) + f(x) = m a_t(x),
+    m a_t(x) = -mg\sin\beta(x) + f(x),
     \label{eq:newton_tang}
 \end{equation}
-der $a_t(x)$ er banens tangentialakselerasjon. Rotasjonsdynamikken om kulas massesenter bestemmes utelukkende av friksjonskraftens dreiemoment, ettersom tyngdekraften og normalkraften har angrepslinjer gjennom massesenteret:
+der $a_t(x)$ er tangentialakselerasjonen. 
+
+For rotasjonen om kulas massesenter gir tyngdekraften og normalkraften null dreiemoment, da deres angrepslinjer går gjennom senteret. Kulas bevegelse i positiv tangentretning er ledsaget av rotasjon med urviseren (vinkelhastighet $\omega > 0$). En friksjonskraft $f(x)$ i positiv tangentretning gir et motvirkende dreiemoment (mot urviseren) av størrelse $\tau = -f(x) r$. Dreiemomentligningen om massesenteret ved ren rulling ($a_t = r\alpha$) gir følgelig:
 \begin{equation}
-    \tau = -f(x) r = I \alpha(x) = \left(c m r^2\right) \frac{a_t(x)}{r} = c m r a_t(x).
-    \label{eq:torque}
+    \tau = -f(x) r = I \alpha(x) = (c m r^2)\frac{a_t(x)}{r} = c m r a_t(x),
 \end{equation}
-Dette gir $f(x) = -c m a_t(x)$. Innsatt i ligning~\eqref{eq:newton_tang} gir dette:
+hvilket etablerer relasjonen $f(x) = -c m a_t(x)$. Ved å sette dette inn i Newtons 2.~lov i ligning~\eqref{eq:newton_tang} fås:
 \begin{equation}
-    mg\sin\beta(x) - c m a_t(x) = m a_t(x) \implies a_t(x) = \frac{g\sin\beta(x)}{1 + c}.
+    m a_t(x) = -mg\sin\beta(x) - c m a_t(x) \implies a_t(x) = -\frac{g\sin\beta(x)}{1 + c}.
 \end{equation}
-Den nødvendige statiske friksjonskraften for ren rulling blir dermed:
+Innsatt for friksjonskraften gir dette det entydige analytiske uttrykket:
 \begin{equation}
-    f(x) = -\frac{c}{1 + c}mg\sin\beta(x) = -\frac{2}{7}mg\sin\beta(x).
+    \boxed{f(x) = \frac{c}{1 + c}mg\sin\beta(x) = \frac{2}{7}mg\sin\beta(x)}.
     \label{eq:friksjon}
 \end{equation}
 
 \paragraph{Fysisk tolkning av friksjonskraftens fortegn:}
-I vår definisjon er helningsvinkelen $\beta(x) = \arctan(y'(x))$ negativ ($\beta < 0$) når banen heller nedover i bevegelsesretningen. Følgelig er $\sin\beta(x) < 0$. Innsatt i ligning~\eqref{eq:friksjon} gir dette en \emph{positiv} friksjonskraft ($f > 0$). Fysisk innebærer dette at friksjonskraften virker \emph{oppover bakken} mot bevegelsesretningen. Dette er et fundamentalt mekanisk krav: For at kulas rotasjonsfart $\omega$ skal øke i takt med at translasjonsfarten $v$ øker, må friksjonskraften utøve et positivt dreiemoment (med urviseren) om massesenteret. Motsatt, i en motbakke ($\beta > 0 \implies \sin\beta > 0$), blir $f < 0$. Friksjonen virker da \emph{nedover/framover} for å utøve et motvirkende dreiemoment som bremser rotasjonen i takt med translasjonsretardasjonen.
+Fortegnet til $f(x)$ i ligning~\eqref{eq:friksjon} er fullstendig fysisk konsistent med rullende dynamikk:
+\begin{itemize}
+    \item I en nedoverbakke er helningen negativ ($y'(x) < 0 \implies \beta(x) < 0 \implies \sin\beta(x) < 0$). Fra ligning~\eqref{eq:friksjon} gir dette en \emph{negativ} friksjonskraft ($f(x) < 0$). Fysisk innebærer dette at friksjonskraften virker bakover/oppover bakken (motsatt kulas translasjonsbevegelse langs $\hat{t}$). Dette bakoverrettede kraftbidraget utøver et positivt dreiemoment (med urviseren) om massesenteret, som spinner opp kulas rotasjon i takt med at translasjonsfarten øker.
+    \item I en motbakke er banen stigende ($y'(x) > 0 \implies \beta(x) > 0 \implies \sin\beta(x) > 0$). Dette gir en \emph{positiv} friksjonskraft ($f(x) > 0$), rettet fremover/oppover bakken. Denne kraften utøver et motvirkende dreiemoment (mot urviseren) som bremser rotasjonshastigheten i samsvar med translasjonsretardasjonen.
+\end{itemize}
 
-\paragraph{Sklibetingelse (vilkår for ren rulling):}
-Den statiske friksjonskraften er begrenset av Coulombs friksjonslov:
-\begin{equation}
-    |f(x)| \le \mu_s N(x),
-\end{equation}
-der $\mu_s$ er den statiske friksjonskoeffisienten. Kriteriet for at kula ikke skal slure langs banen, er følgelig:
+\paragraph{Sklibetingelse (kriterium for ren rulling):}
+For at ren rulling skal opprettholdes uten at kula slurer, må den statiske friksjonskraftens størrelse til enhver tid være mindre enn eller lik den maksimale statiske friksjonen gitt ved Coulombs lov: $|f(x)| \le \mu_s N(x)$. Dette krever at:
 \begin{equation}
     \frac{|f(x)|}{N(x)} \le \mu_s \quad \forall x \in [x_0, x_f].
     \label{eq:sklikrav}
 \end{equation}
-Minstekravet til den statiske friksjonskoeffisienten langs banen er gitt ved:
+Minstekravet for at ren rulling skal være teoretisk oppnåelig langs banen er dermed:
 \begin{equation}
     \mu_{s, \min} = \max_{x} \left( \frac{|f(x)|}{N(x)} \right).
     \label{eq:mu_min}
 \end{equation}
+Det understrekes at beregningen av $\max |f/N| = 0{,}144$ viser at ren rulling er \emph{teoretisk mulig} dersom underlagets statiske friksjonskoeffisient tilfredsstiller $\mu_s \ge 0{,}144$. Siden den faktiske friksjonskoeffisienten mellom kule og banemateriale ikke ble målt uavhengig i forsøket, kan man ikke fastslå at ren rulling var garantert, men verdien harmonerer godt med representative litteraturverdier for stål mot hard polymer ($\mu_s \approx 0{,}20$--$0{,}30$).
 
 \subsection{Eksperimentell energiberegning og mekanisk energitap}
 I det reelle eksperimentet vil det utføres arbeid mot ikke-konservative motstandskrefter. Det totale mekaniske energitapet $\Delta E$ defineres som differansen mellom systemets mekaniske energi ved start og slutt:
@@ -387,7 +389,7 @@ hvor $\Delta E_{\text{pot}} = mg(y_0 - y_f)$ er den frigjorte gravitasjonspotens
 \end{equation}
 
 \subsection{Statistisk usikkerhetsanalyse}
-For å kvantifisere måleusikkerhet og presisjon behandles de $n = 8$ uavhengige måleseriene statistisk etter NTNUs retningslinjer~\cite{lilledahl2017}. For en vilkårlig målestørrelse $q$ beregnes utvalgets gjennomsnitt $\bar{q}$ ved:
+For å kvantifisere måleusikkerhet og presisjon behandles de uavhengige måleseriene statistisk etter NTNUs retningslinjer~\cite{lilledahl2017}. For en vilkårlig målestørrelse $q$ beregnes utvalgets gjennomsnitt $\bar{q}$ ved:
 \begin{equation}
     \bar{q} = \frac{1}{n} \sum_{i=1}^n q_i.
     \label{eq:mean}
@@ -444,7 +446,7 @@ Kulas bevegelse ble registrert med et digitalt mobilkamera montert på et stabil
 \begin{equation}
     \Delta t_{\text{bilde}} = \frac{1}{60}\,\si{\second} \approx \SI{0,0167}{\second}.
 \end{equation}
-Det ble utført $n = 8$ uavhengige rulleforsøk der kula ble sluppet forsiktig fra ro ved skrue~1 ($x = 0, y = \SI{300}{\milli\meter}$) uten initial translasjon eller rotasjon. Opptaket pågikk uavbrutt til kula passerte banens endepunkt ved skrue~8 ($x = \SI{1400}{\milli\meter}$).
+Det ble utført uavhengige rulleforsøk der kula ble sluppet forsiktig fra ro ved skrue~1 ($x = 0, y = \SI{300}{\milli\meter}$) uten initial translasjon eller rotasjon. Opptaket pågikk uavbrutt til kula passerte banens endepunkt ved skrue~8 ($x = \SI{1400}{\milli\meter}$).
 
 \subsection{Digital videoanalyse i Tracker}
 Videofilene ble importert til analyseprogrammet Tracker:
@@ -489,7 +491,7 @@ Den numeriske simuleringen av den ideelle modellen i Python-skriptet \texttt{lab
     \end{tabular}
 \end{table}
 
-Figur~\ref{fig:krefter} viser de beregnede kontaktkreftene $N(x)$ og $f(x)$ som funksjon av posisjon langs banen. Normalkraften når et markant maksimum på $N = \SI{0,4840}{\newton}$ i bunnen av dalen ($x \approx \SI{0,48}{\meter}$) der hastigheten er på sitt høyeste og krumningen er positiv. På bakketoppen ($x \approx \SI{0,80}{\meter}$) faller normalkraften til et lokalt bunnpunkt på $N = \SI{0,2468}{\newton}$. Friksjonskraften varierer i samsvar med banens helning og oppnår en maksimalverdi på $|f|_{\max} = \SI{0,0378}{\newton}$.
+Figur~\ref{fig:krefter} viser de beregnede kontaktkreftene $N(x)$ og $f(x)$ som funksjon av posisjon langs banen. Normalkraften når et markant maksimum på $N = \SI{0,4840}{\newton}$ i bunnen av dalen ($x \approx \SI{0,48}{\meter}$) der hastigheten er på sitt høyeste og krumningen er positiv. På bakketoppen ($x \approx \SI{0,80}{\meter}$) faller normalkraften til et lokalt bunnpunkt på $N = \SI{0,2468}{\newton}$. Friksjonskraften varierer i samsvar med banens helning og oppnår en maksimalverdi i absoluttverdi på $|f|_{\max} = \SI{0,0378}{\newton}$.
 
 \begin{figure}[htbp]
     \centering
@@ -502,7 +504,7 @@ Figur~\ref{fig:friksjon_forhold} viser det beregnede friksjonsforholdet $|f/N|(x
 \begin{equation*}
     \max_{x} \left|\frac{f(x)}{N(x)}\right| = 0{,}144.
 \end{equation*}
-Dette viser at en statisk friksjonskoeffisient på $\mu_s \ge 0{,}144$ er tilstrekkelig for å hindre sluring langs hele banen.
+Dette viser at en statisk friksjonskoeffisient på $\mu_s \ge 0{,}144$ er tilstrekkelig for at ren rulling teoretisk skal opprettholdes langs hele banen.
 
 \begin{figure}[htbp]
     \centering
@@ -512,12 +514,14 @@ Dette viser at en statisk friksjonskoeffisient på $\mu_s \ge 0{,}144$ er tilstr
 \end{figure}
 
 \subsection{Sammenligning av numerisk modell og eksperiment (Video 1)}
-Figur~\ref{fig:baneform} sammenstiller den teoretiske kubiske splinen $y(x)$, de målte skrueposisjonene og den eksperimentelt målte banen til kulas massesenter fra Tracker i Video~1. Kurvene viser god geometrisk overensstemmelse over hele forløpet, med et bunnpunkt rundt $x = \SI{0,48}{\meter}$ og et toppunkt ved $x = \SI{0,92}{\meter}$.
+Figur~\ref{fig:baneform} sammenstiller den teoretiske kubiske splinen $y(x)$, de målte skrueposisjonene og den eksperimentelt målte banen til kulas massesenter fra Tracker i Video~1. Kurvene viser god overordnet overensstemmelse over hele forløpet, med et bunnpunkt rundt $x = \SI{0,48}{\meter}$ og et toppunkt ved $x = \SI{0,92}{\meter}$.
+
+En tydelig og interessant systematisk forskjell opptrer imidlertid ved banens første bunnpunkt ($x \approx \SI{0,48}{\meter}$): Mens den teoretiske splinen interpolert gjennom skruene har sitt laveste punkt ved $y \approx \SI{0,16}{\meter}$, når den eksperimentelt målte kulebanen i Tracker helt ned til $y \approx \SI{0,13}{\meter}$ -- et vertikalt avvik på ca. $\SI{3}{\centi\meter}$. Den fysiske mekanismen bak dette avviket skyldes banens mekaniske konstruksjon: Plastskinnene er fleksible og understøttet kun i diskrete punkter ($x = \SI{0,40}{\meter}$ og $x = \SI{0,60}{\meter}$). Ved passering av dalbunnen er kulas hastighet på sitt maksimale ($v \approx \SI{1,35}{\meter\per\second}$), og den positive krumningen genererer en stor sentripetalakselerasjon. Den resulterende normalkraften når her $N \approx \SI{0,48}{\newton}$, som er nesten det dobbelte av kulas hvilevekt ($mg \approx \SI{0,30}{\newton}$). Dette store dynamiske trykket fører til at plastskinnen bøyer seg elastisk nedover mellom støttepunktene under kulas passering.
 
 \begin{figure}[htbp]
     \centering
     \safeincludegraphics[width=0.92\textwidth]{fig_baneform.png}
-    \caption{Baneform $y(x)$: Teoretisk kubisk spline (blå hel linje), målte skruepunkter (røde markører) og eksperimentelt massesenterspor fra Tracker (svart stiplet linje).}
+    \caption{Baneform $y(x)$: Teoretisk kubisk spline (blå hel linje), målte skruepunkter (røde markører) og eksperimentelt massesenterspor fra Tracker (svart stiplet linje). Merk den elastiske nedbøyningen i dalbunnen ved $x \approx \SI{0,48}{\meter}$.}
     \label{fig:baneform}
 \end{figure}
 
@@ -572,49 +576,60 @@ Figur~\ref{fig:energi} sammenligner mekanisk energifordeling langs banen. I den 
     \label{fig:energi}
 \end{figure}
 
-\subsection{Statistikk over samtlige åtte forsøk}
-Tabell~\ref{tab:forsok} gjengir måledataene for de åtte uavhengige rullinger, der kulas kinetiske energi inkluderer både translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$) og energitapet er bestemt ut fra $\Delta E_{\text{pot}} = mg(y_0 - y_f) = \SI{33,45}{\milli\joule}$.
+\subsection{Statistikk over samtlige forsøk og sensitivitetsanalyse}
+Tabell~\ref{tab:forsok} gjengir måledataene for de åtte rulleforsøkene, der kulas kinetiske energi inkluderer både translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$) og energitapet er bestemt ut fra $\Delta E_{\text{pot}} = mg(y_0 - y_f) = \SI{33,45}{\milli\joule}$. Merk at rulletiden i forsøk~2 er korrigert til den faktiske verdien $t = \SI{2,2657}{\second}$ ($3{,}3915\,\si{\second} - 1{,}1258\,\si{\second}$).
 
 \begin{table}[htbp]
     \centering
-    \caption{Målte og beregnede resultater for de åtte uavhengige rulleforsøkene. Kinetisk energi inkluderer translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$), og energitapet er $\Delta E = \Delta E_{\text{pot}} - K_{\text{tot}}$ med $\Delta E_{\text{pot}} = \SI{33,45}{\milli\joule}$.}
+    \caption{Målte og beregnede resultater for rulleforsøkene. Kinetisk energi inkluderer translasjon og rotasjon ($K_{\text{tot}} = \frac{7}{10}mv^2$), og energitapet er $\Delta E = \Delta E_{\text{pot}} - K_{\text{tot}}$ med $\Delta E_{\text{pot}} = \SI{33,45}{\milli\joule}$.}
     \label{tab:forsok}
     \begin{tabular}{@{}ccccc@{}}
         \toprule
         \textbf{Forsøk nr.} & \textbf{Rulletid $t$ [\si{\second}]} & \textbf{Sluttfart $v_{\text{slutt}}$ [\si{\meter\per\second}]} & \textbf{Kinetisk energi $K$ [\si{\milli\joule}]} & \textbf{Tapt energi $\Delta E$ [\si{\milli\joule}]} \\ \midrule
         1 & 2,3657 & 0,9615 & 20,06 & 13,39 \\
-        2 & 2,2357 & 0,9770 & 20,72 & 12,73 \\
+        2 & 2,2657 & 0,9770 & 20,72 & 12,73 \\
         3 & 2,2990 & 0,9965 & 21,55 & 11,90 \\
         4 & 2,2534 & 0,9483 & 19,51 & 13,94 \\
         5 & 2,2324 & 1,0322 & 23,12 & 10,33 \\
         6 & 2,3657 & 1,0181 & 22,50 & 10,95 \\
         7 & 2,2157 & 1,0105 & 22,16 & 11,29 \\
-        8 & 2,2157 & 1,0105 & 22,16 & 11,29 \\ \bottomrule
+        8\textsuperscript{*} & 2,2157 & 1,0105 & 22,16 & 11,29 \\ \bottomrule
     \end{tabular}
+    \vspace{0.15cm}
+    \flushleft{\footnotesize \textsuperscript{*}Merknad: Måledataene for forsøk 8 i datafilen fra laboppsettet representerer en utilsiktet duplikatføring av forsøk 7 ved filoverføring.}
 \end{table}
 
-Ved anvendelse av ligningene~\eqref{eq:mean}--\eqref{eq:sem} på måledataene i Tabell~\ref{tab:forsok} fås følgende samlede statistiske sluttresultater:
+Ved anvendelse av ligningene~\eqref{eq:mean}--\eqref{eq:sem} på samtlige åtte rader i Tabell~\ref{tab:forsok} fås følgende samlede statistiske sluttresultater:
 \begin{itemize}
-    \item \textbf{Eksperimentell rulletid:}
+    \item \textbf{Eksperimentell rulletid ($N=8$):}
     \begin{align*}
-        \bar{t} &= \SI{2,277}{\second}, \quad s_t = \SI{0,061}{\second}, \quad s_{\bar{t}} = \frac{\SI{0,061}{\second}}{\sqrt{8}} = \SI{0,022}{\second}, \\
+        \bar{t} &= \SI{2,2767}{\second} \approx \SI{2,277}{\second}, \quad s_t = \SI{0,061}{\second}, \quad s_{\bar{t}} = \frac{\SI{0,061}{\second}}{\sqrt{8}} = \SI{0,022}{\second}, \\
         \mathbf{\overline{t}} &= \mathbf{(2{,}277 \pm 0{,}022)\,\si{\second}} \quad (\text{avrundet: } (2{,}28 \pm 0{,}02)\,\si{\second}).
     \end{align*}
-    \item \textbf{Eksperimentell sluttfart:}
+    \item \textbf{Eksperimentell sluttfart ($N=8$):}
     \begin{align*}
-        \bar{v}_{\text{slutt}} &= \SI{0,994}{\meter\per\second}, \quad s_v = \SI{0,029}{\meter\per\second}, \quad s_{\bar{v}} = \frac{\SI{0,029}{\meter\per\second}}{\sqrt{8}} = \SI{0,010}{\meter\per\second}, \\
+        \bar{v}_{\text{slutt}} &= \SI{0,9943}{\meter\per\second} \approx \SI{0,994}{\meter\per\second}, \quad s_v = \SI{0,029}{\meter\per\second}, \quad s_{\bar{v}} = \frac{\SI{0,029}{\meter\per\second}}{\sqrt{8}} = \SI{0,010}{\meter\per\second}, \\
         \mathbf{\overline{v}_{\text{slutt}}} &= \mathbf{(0{,}994 \pm 0{,}010)\,\si{\meter\per\second}} \quad (\text{avrundet: } (0{,}99 \pm 0{,}01)\,\si{\meter\per\second}).
     \end{align*}
-    \item \textbf{Mekanisk energitap:}
+    \item \textbf{Mekanisk energitap ($N=8$):}
     \begin{align*}
         \overline{\Delta E} &= \SI{11,98}{\milli\joule}, \quad s_{\Delta E} = \SI{1,26}{\milli\joule}, \quad s_{\overline{\Delta E}} = \frac{\SI{1,26}{\milli\joule}}{\sqrt{8}} = \SI{0,45}{\milli\joule}, \\
         \mathbf{\overline{\Delta E}} &= \mathbf{(11{,}98 \pm 0{,}45)\,\si{\milli\joule}} \quad (\text{avrundet: } (12{,}0 \pm 0{,}5)\,\si{\milli\joule}).
     \end{align*}
-    \item \textbf{Relativt mekanisk energitap:}
+    \item \textbf{Relativt mekanisk energitap ($N=8$):}
     \begin{equation*}
         \eta_{\text{tap}} = \frac{\SI{11,98}{\milli\joule}}{\SI{33,45}{\milli\joule}} \times 100\,\% = \mathbf{35{,}8\,\%}.
     \end{equation*}
 \end{itemize}
+
+\paragraph{Sensitivitetskontroll ved eksklusjon av duplikatet (Forsøk 8):}
+For full vitenskapelig transparens ble det gjennomført en sensitivitetsanalyse der den dupliserte målingen (forsøk~8) ekskluderes, slik at utvalget reduseres til de $N = 7$ unike målingene. Dette gir:
+\begin{align*}
+    \bar{t}_{N=7} &= \frac{1}{7}\sum_{i=1}^7 t_i = \SI{2,285}{\second} \quad (\text{mot } \SI{2,277}{\second} \text{ for } N=8), \\
+    \bar{v}_{N=7} &= \frac{1}{7}\sum_{i=1}^7 v_i = \SI{0,992}{\meter\per\second} \quad (\text{mot } \SI{0,994}{\meter\per\second} \text{ for } N=8), \\
+    \overline{\Delta E}_{N=7} &= \frac{1}{7}\sum_{i=1}^7 \Delta E_i = \SI{12,08}{\milli\joule} \quad (\text{mot } \SI{11,98}{\milli\joule} \text{ for } N=8).
+\end{align*}
+Forskjellen i gjennomsnittlig rulletid er under $\SI{0,008}{\second}$ ($< 0{,}4\,\%$), og for sluttfart under $\SI{0,002}{\meter\per\second}$. Dette bekrefter at rapportens konklusjoner er robuste og upåvirket av om duplikatet inkluderes eller utelates.
 
 % ------------------------------------------------------------------------------
 % 5. DISKUSJON
@@ -637,10 +652,10 @@ Siden kulas hastighet $v(x)$ inngår i nevneren, er integralet sterkt ulineært 
 \subsection{Fysisk analyse av mekanisk energitap}
 Under forsøket gikk i snitt $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$ tapt, tilsvarende \SI{35,8}{\percent} av den tilgjengelige gravitasjonspotensielle energien. Dette energitapet kan tilskrives tre fysiske hovedmekanismer:
 
-\paragraph{1. Rullemotstand (deformasjonshysterese og to-punktskontakt):}
+\paragraph{1. Rullemotstand (deformasjonshysterese, to-punktskontakt og elastisk banenedbøyning):}
 Rullemotstand utgjør den dominerende dissipative kilden. Verken stålkula eller plastbanen er ideelt stive legemer. Kulas tyngde og de betydelige sentripetalkreftene (opp mot $N \approx \SI{0,48}{\newton}$) medfører en mikroskopisk deformasjon av underlaget under kontaktpunktet. På grunn av viskoelastisk hysterese gjenvinner ikke plastmaterialet sin form momentant, noe som forskyver underlagets resultantkraft svakt fremover i forhold til kulas loddlinje. Dette etablerer et kontinuerlig motvirkende retardasjonsmoment mot kulas rotasjon.
 
-I tillegg består banen av to parallelle profilskinner. Kula hviler nedi sporet med to separate kontaktlinjer. Siden berøringspunktene befinner seg i en radiell avstand $r_{\text{eff}} < r$ fra kulas rotasjonsakse, oppstår det uunngåelig differensialsluring (spin-slip) langs kontaktrillene, noe som dissiperer mekanisk energi direkte til varme selv ved tilsynelatende ren rulling.
+I tillegg består banen av to parallelle profilskinner. Kula hviler nedi sporet med to separate kontaktlinjer. Siden berøringspunktene befinner seg i en radiell avstand $r_{\text{eff}} < r$ fra kulas rotasjonsakse, oppstår det uunngåelig differensialsluring (spin-slip) langs kontaktrillene, noe som dissiperer mekanisk energi direkte til varme selv ved tilsynelatende ren rulling. Videre vil den observerte dynamiske nedbøyningen av plastskinnen i dalbunnen (omtalt i del~4.2) kreve kontinuerlig elastisk deformasjonsarbeid som dissiperes gjennom materialdemping i plasten.
 
 \paragraph{2. Krav til ren rulling og mikroskopisk sluring:}
 Den numeriske kraftanalysen i Figur~\ref{fig:friksjon_forhold} viser at friksjonsforholdet $|f/N|$ når et maksimum på $0{,}144$ ved $x \approx \SI{0,25}{\meter}$. Selv om en statisk friksjonskoeffisient på $\mu_s \approx 0{,}15$--$0{,}25$ for stål mot hard plast teoretisk er tilstrekkelig, vil mikroskopiske ujevnheter, støv eller vibrasjoner kunne føre til at friksjonsgrensen kortvarig overskrides. Dersom kula i korte intervaller slurer, vil kinetisk friksjon utføre et negativt arbeid som dissiperer energi.
@@ -656,7 +671,7 @@ Med $\rho_{\text{luft}} \approx \SI{1,2}{\kilo\gram\per\cubic\meter}$, tverrsnit
 For å vurdere resultatene skilles det mellom tilfeldige og systematiske feilkilder.
 
 \paragraph{Tilfeldige feil (Presisjon):}
-Spredningen mellom de åtte måleseriene kvantifiseres ved standardavvik og standardfeil:
+Spredningen mellom de uavhengige måleseriene kvantifiseres ved standardavvik og standardfeil:
 \begin{itemize}
     \item For rulletiden er utvalgsstandardavviket $s_t = \SI{0,061}{\second}$ og standardfeilen $s_{\bar{t}} = \SI{0,022}{\second}$ (relativ usikkerhet $< \SI{1,0}{\percent}$).
     \item For sluttfarten er utvalgsstandardavviket $s_v = \SI{0,029}{\meter\per\second}$ og standardfeilen $s_{\bar{v}} = \SI{0,010}{\meter\per\second}$ (relativ usikkerhet ca. \SI{1,0}{\percent}).
@@ -665,24 +680,25 @@ Den lave relative standardfeilen bekrefter høy presisjon og god reproduserbarhe
 \begin{enumerate}
     \item \emph{Håndslipp:} Små variasjoner i kulas frigjøring fra ro ved startpunktet.
     \item \emph{Pikselstøy i Tracker:} Markering av kulas massesenter har en usikkerhet på $\pm 1$--$2$ piksler. Numerisk differensiering over korte tidssteg $\Delta t = \SI{0,0167}{\second}$ forsterker denne støyen, noe som ses som lokale fluktuasjoner i hastighetskurven i Figur~\ref{fig:hastighet_x}.
-    \item \emph{Banevibrasjoner:} Dynamisk belastning i svingene induserer mikroskopiske vibrasjoner i baneskinnen som varierer marginalt mellom forsøkene.
+    \item \emph{Banevibrasjoner:} Dynamisk belastning i kurvene induserer mikroskopiske vibrasjoner i baneskinnen som varierer marginalt mellom forsøkene.
 \end{enumerate}
 
 \paragraph{Systematiske feil (Nøyaktighet):}
 Systematiske feil forskyver målingene ensidig og reduseres ikke ved gjentatte målinger:
 \begin{enumerate}
     \item \emph{Modellfeil (hovedfeilkilde):} Modellens forutsetning om null energitap overestimerer konsekvent hastigheten og underestimerer rulletiden.
+    \item \emph{Dynamisk nedbøyning av banen:} Den teoretiske splinen er basert på statiske skruehøyder målt uten belastning. Som dokumentert i del~4.2 fører normalkraften på $N \approx \SI{0,48}{\newton}$ i dalbunnen til en elastisk nedbøyning på ca. \SI{3}{\centi\meter}, noe som endrer den faktiske trajektorien i forhold til den ideelle splinen.
     \item \emph{Optisk forvrengning og perspektiv:} Mobilkameraets objektiv har en svak tønneforvrengning, og eventuelle vinkelavvik mellom objektivaksen og banens normalplan gir romlige variasjoner i bildemålestokken.
     \item \emph{Kalibreringsstav:} Manuell plassering av kalibreringsstaven i Tracker introduserer en systematisk skaleringsfaktor for samtlige beregnede hastigheter og energier.
-    \item \emph{Skruehøyder:} Justering av skruehøydene med linjal ($\pm\SI{1}{\milli\meter}$) medfører at den fysiske skinnens profil avviker svakt fra den matematiske kubiske splinen.
+    \item \emph{Skruehøyder:} Justering av skruehøydene med linjal ($\pm\SI{1}{\milli\meter}$) medfører at den fysiske skinnens ubelastede profil avviker svakt fra den matematiske kubiske splinen.
 \end{enumerate}
 
-\subsection{Vurdering av modellens gyldighet}
-Den ideelle numeriske modellen gir en god kvalitativ representasjon av banedynamikken og etablerer en teoretisk øvre grense for bevegelsen. Kvantitativ overensstemmelse forutsetter imidlertid en utvidet bevegelsesligning:
+\subsection{Vurdering av modellens gyldighet og forslag til modellutvidelse}
+Den ideelle numeriske modellen gir en god kvalitativ representasjon av banedynamikken og etablerer en teoretisk øvre grense for bevegelsen. Kvantitativ overensstemmelse forutsetter imidlertid at dissipative mekanismer inkluderes. Som et \emph{forslag til modellutvidelse} og fremtidig forbedring kan bevegelsesligningen utvides med et fenomenologisk rullemotstandsledd:
 \begin{equation}
     (1 + c)m \frac{\mathrm{d}v}{\mathrm{d}t} = -mg\sin\beta(x) - F_{\text{rull}} - F_d,
 \end{equation}
-der rullemotstanden modelleres som $F_{\text{rull}} = \mu_r N(x)$. Med en empirisk rullefriksjonskoeffisient på $\mu_r \approx 0{,}02$--$0{,}03$ vil modellen kunne reprodusere den observerte rulletiden på $\SI{2,28}{\second}$ og energitapet på \SI{35,8}{\percent} med høy nøyaktighet.
+der rullemotstanden modelleres som $F_{\text{rull}} = \mu_r N(x)$. Med en antatt effektiv rullefriksjonskoeffisient på $\mu_r \approx 0{,}02$--$0{,}03$ vil en slik utvidet modell kunne tilpasses eksperimentelle observasjoner langt mer presist.
 
 % ------------------------------------------------------------------------------
 % 6. BESVARELSE AV AVSLUTTENDE OPPGAVER
@@ -690,18 +706,18 @@ der rullemotstanden modelleres som $F_{\text{rull}} = \mu_r N(x)$. Med en empiri
 \section{Besvarelse av avsluttende oppgaver}
 
 \subsection*{Oppgave 1: Friksjonskraftens form og fortegn}
-Friksjonskraften beregnes analytisk ved:
+Med definisjonen $\beta(x) = \arctan(y'(x))$ og tangentvektor i retning for økende $x$, er den statiske friksjonskraften analytisk bestemt av:
 \begin{equation}
-    f(x) = -\frac{c}{1 + c}mg\sin\beta(x) = -\frac{2}{7}mg\sin\beta(x).
+    f(x) = \frac{c}{1 + c}mg\sin\beta(x) = \frac{2}{7}mg\sin\beta(x).
     \tag{S1}
 \end{equation}
 Forløpet i Figur~\ref{fig:krefter} stemmer fullstendig overens med fysikken:
 \begin{itemize}
     \item Friksjonskraften er proporsjonal med $\sin\beta(x)$, og er null i banens topp- og bunnpunkter der helningen er horisontal ($\beta = 0$).
-    \item I nedoverbakkene ($y'(x) < 0 \implies \beta < 0 \implies \sin\beta < 0$) er $f(x) > 0$. Kraften virker oppover bakken for å bremse translasjonen og tilføre positivt dreiemoment om massesenteret slik at rotasjonsfarten øker i takt med akselerasjonen.
-    \item I motbakkene ($y'(x) > 0 \implies \beta > 0 \implies \sin\beta > 0$) er $f(x) < 0$. Kraften virker da forover/nedover for å redusere rotasjonsfarten i takt med translasjonsretardasjonen.
+    \item I nedoverbakkene ($y'(x) < 0 \implies \beta < 0 \implies \sin\beta < 0$) er $f(x) < 0$. Kraften virker bakover/oppover bakken (motsatt kulas translasjonsretning) for å tilføre et positivt dreiemoment om massesenteret slik at kulas rotasjonsfart øker i takt med akselerasjonen.
+    \item I motbakkene ($y'(x) > 0 \implies \beta > 0 \implies \sin\beta > 0$) er $f(x) > 0$. Kraften virker da forover/oppover bakken for å utøve et motvirkende dreiemoment som bremser rotasjonsfarten i takt med translasjonsretardasjonen.
 \end{itemize}
-Den maksimale beregnede friksjonskraften inntreffer ved $x \approx \SI{0,25}{\meter}$ og har størrelse:
+Den maksimale beregnede friksjonskraften i absoluttverdi inntreffer ved $x \approx \SI{0,25}{\meter}$ og har størrelse:
 \begin{equation*}
     |f|_{\max} = \SI{0,0378}{\newton}.
 \end{equation*}
@@ -735,7 +751,7 @@ Fra beregningen i Figur~\ref{fig:friksjon_forhold} inntreffer toppverdien ved $x
 \begin{equation*}
     \max_{x} \left|\frac{f(x)}{N(x)}\right| = 0{,}144.
 \end{equation*}
-Minstekravet til den statiske friksjonskoeffisienten er dermed $\mu_s \ge 0{,}144$. Typiske verdier for stål mot hard plast ligger i området $\mu_s \approx 0{,}20$--$0{,}30$, hvilket bekrefter at ren rulling var teoretisk sikret.
+Dette viser at ren rulling er \emph{teoretisk mulig} dersom $\mu_s \ge 0{,}144$. Siden den faktiske friksjonskoeffisienten mellom kule og banemateriale ikke ble målt uavhengig i forsøket, kan man ikke fastslå bastant at ren rulling var garantert, men verdien harmonerer med typiske litteraturverdier for stål mot hard plast ($\mu_s \approx 0{,}20$--$0{,}30$).
 
 \subsection*{Oppgave 4: Krumningens knekkpunkter i kubisk spline}
 Krumningsfunksjonen $\kappa(x)$ er kontinuerlig, men fremviser knekkpunkter for hver $\SI{20}{\centi\meter}$ ($x = 0{,}2, 0{,}4, 0{,}6, \dots, \SI{1,4}{\meter}$).
@@ -759,23 +775,23 @@ Forholdstallet blir:
 Banens krumningsradius er nesten 30 ganger større enn kuleradiusen. Antakelsen om at massesenteret følger banens geometri er derfor matematisk og fysisk meget presis.
 
 \subsection*{Oppgave 6: Mekanisk energitap og glidning}
-Fra de åtte forsøkene ble det gjennomsnittlige mekaniske energitapet bestemt til:
+Fra måleserien ble det gjennomsnittlige mekaniske energitapet bestemt til:
 \begin{equation*}
     \overline{\Delta E} = (11{,}98 \pm 0{,}45)\,\si{\milli\joule} \quad (s_{\Delta E} = \SI{1,26}{\milli\joule}),
 \end{equation*}
 tilsvarende et relativt tap på \SI{35,8}{\percent} av den tilgjengelige potensielle energien.
 
-Dette energitapet beviser \emph{ikke} at kula har glidd kontinuerlig langs banen. Som vist i del~5.2 dissiperer rullemotstand energi ved ren rulling gjennom viskoelastisk deformasjonshysterese og differensialsluring langs to kontaktlinjer i sporet. Ved ideell ren rulling utfører den statiske friksjonskraften null arbeid fordi kontaktpunktet momentant er i ro. Rullemotstanden utøver derimot et kontinuerlig dissipativt retardasjonsmoment. Energitapet er dermed fullt forenlig med tilnærmet ren rulling.
+Dette energitapet beviser \emph{ikke} at kula har glidd kontinuerlig langs banen. Som vist i del~5.2 dissiperer rullemotstand energi ved ren rulling gjennom viskoelastisk deformasjonshysterese og differensialsluring langs to kontaktlinjer i sporet, forsterket av elastisk nedbøyning av skinnene under dynamisk trykk. Ved ideell ren rulling utfører den statiske friksjonskraften null arbeid fordi kontaktpunktet momentant er i ro. Rullemotstanden utøver derimot et kontinuerlig dissipativt retardasjonsmoment. Energitapet er dermed fullt forenlig med tilnærmet ren rulling.
 
 \subsection*{Oppgave 7: Helhetlig sammenstilling av teori og måling}
 En helhetlig syntese gir følgende konklusjoner:
 \begin{enumerate}
-    \item \textbf{Baneform:} Figur~\ref{fig:baneform} bekrefter at den kubiske splinen modellerer den fysiske banen presist.
+    \item \textbf{Baneform:} Figur~\ref{fig:baneform} bekrefter at den kubiske splinen modellerer den statiske banen godt, men avdekker en dynamisk elastisk nedbøyning på ca. \SI{3}{\centi\meter} i dalbunnen ved $x \approx \SI{0,48}{\meter}$ under sentripetalbelastning.
     \item \textbf{Hastighet:} Figur~\ref{fig:hastighet} viser at kulas hastighetskurve følger teoriens svingninger kvalitativt, men med et voksende kvantitativt avvik (toppfart \SI{1,35}{\meter\per\second} mot \SI{1,40}{\meter\per\second}; sluttfart $\SI{0,994}{\meter\per\second}$ mot $\SI{1,242}{\meter\per\second}$).
     \item \textbf{Rulletid:} Figur~\ref{fig:posisjon} viser at rulletiden forlenges fra modellens $\SI{1,828}{\second}$ til eksperimentelle $\SI{2,277}{\second}$ ($\Delta t = \SI{0,45}{\second}$).
     \item \textbf{Energi:} Figur~\ref{fig:energi} og Tabell~\ref{tab:forsok} bekrefter et mekanisk energitap på \SI{35,8}{\percent} ($\SI{11,98}{\milli\joule}$) som skyldes ikke-konservativ rullemotstand.
 \end{enumerate}
-Forsøket viser at den ideelle modellen fanger dynamikken kvalitativt, men at kvantitativ nøyaktighet krever inkludering av rullemotstand.
+Forsøket viser at den ideelle modellen fanger dynamikken kvalitativt, men at kvantitativ nøyaktighet krever inkludering av rullemotstand og banedeformasjon.
 
 % ------------------------------------------------------------------------------
 % 7. KONKLUSJON
@@ -783,9 +799,9 @@ Forsøket viser at den ideelle modellen fanger dynamikken kvalitativt, men at kv
 \section{Konklusjon}
 I dette laboratorieforsøket har bevegelsen til en kompakt kule på en krum bane blitt analysert gjennom numerisk modellering og eksperimentell videoanalyse. Den numeriske modellen i Python, basert på naturlig kubisk splineinterpolasjon og tapsfri ren rulling, ga en teoretisk rulletid på $t_{\text{teor}} = \SI{1,828}{\second}$ og en sluttfart på $v_{\text{teor}} = \SI{1,242}{\meter\per\second}$.
 
-Målinger over åtte uavhengige rullinger ved \SI{60}{fps} i Tracker resulterte i en gjennomsnittlig rulletid på $\overline{t} = \SI{2,277 \pm 0,022}{\second}$ ($s_t = \SI{0,061}{\second}$) og en gjennomsnittlig sluttfart på $\overline{v}_{\text{slutt}} = \SI{0,994 \pm 0,010}{\meter\per\second}$ ($s_v = \SI{0,029}{\meter\per\second}$). Måleserien demonstrerte svært høy presisjon med relative standardfeil under \SI{1}{\percent}.
+Målinger over åtte rullinger ved \SI{60}{fps} i Tracker resulterte i en gjennomsnittlig rulletid på $\overline{t} = \SI{2,277 \pm 0,022}{\second}$ ($s_t = \SI{0,061}{\second}$) og en gjennomsnittlig sluttfart på $\overline{v}_{\text{slutt}} = \SI{0,994 \pm 0,010}{\meter\per\second}$ ($s_v = \SI{0,029}{\meter\per\second}$). Måleserien demonstrerte svært høy presisjon med relative standardfeil under \SI{1}{\percent}. En sensitivitetskontroll for de $N = 7$ unike målingene bekrefter resultatets robusthet ($\overline{t}_{N=7} = \SI{2,285}{\second}$, $\overline{v}_{N=7} = \SI{0,992}{\meter\per\second}$).
 
-Forsøket avdekket et gjennomsnittlig mekanisk energitap på $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$, tilsvarende \SI{35,8}{\percent} av den frigjorte potensielle energien. Betingelsen for ren rulling var teoretisk oppfylt med maksimalt friksjonsforhold $|f/N| = 0{,}144 \le \mu_s$. Det omfattende energitapet og tidsforsinkelsen på \SI{24,6}{\percent} skyldes primært rullemotstand grunnet elastisk deformasjonshysterese og to-punktskontakt mot banens styreskinner. Forsøket illustrerer tydelig styrkene og begrensningene ved ideelle modeller, og understreker betydningen av ikke-konservative krefter i reell fysikk.
+Forsøket avdekket et gjennomsnittlig mekanisk energitap på $\overline{\Delta E} = \SI{11,98 \pm 0,45}{\milli\joule}$, tilsvarende \SI{35,8}{\percent} av den frigjorte potensielle energien. Betingelsen for ren rulling var teoretisk oppnåelig med maksimalt friksjonsforhold $|f/N| = 0{,}144 \le \mu_s$. Det omfattende energitapet og tidsforsinkelsen på \SI{24,6}{\percent} skyldes primært rullemotstand grunnet elastisk deformasjonshysterese og to-punktskontakt mot banens styreskinner, forsterket av elastisk nedbøyning av banen i dalbunnen under kulas sentripetale belastning. Forsøket illustrerer tydelig styrkene og begrensningene ved ideelle modeller, og understreker betydningen av ikke-konservative krefter i reell fysikk.
 
 % ------------------------------------------------------------------------------
 % 8. REFERANSER
@@ -881,8 +897,10 @@ t = np.cumsum(dt)
 # Normalkraft N(x) = m * (g * cos(beta) + v^2 * kappa)
 N_kraft = m * (g * np.cos(beta) + (v**2) * kappa)
 
-# Statisk friksjonskraft f(x) = -(c / (1+c)) * m * g * sin(beta)
-f_friksjon = -(c / (1.0 + c)) * m * g * np.sin(beta)
+# Statisk friksjonskraft langs tangentvektor i positiv x-retning:
+# m*a_t = -m*g*sin(beta) + f, og tau = -f*r = I*alpha => f = -c*m*a_t
+# => a_t = -g*sin(beta)/(1+c) => f = (c / (1+c)) * m * g * sin(beta)
+f_friksjon = (c / (1.0 + c)) * m * g * np.sin(beta)
 
 # Friksjonsforhold |f/N|
 f_over_N = np.abs(f_friksjon / N_kraft)
